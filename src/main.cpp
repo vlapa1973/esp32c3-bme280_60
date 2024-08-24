@@ -277,6 +277,8 @@ bool readData()
     {
       return true;
     }
+    Serial.print("\ncountSleep = ");
+    Serial.println(data.countSleep);
   }
 }
 
