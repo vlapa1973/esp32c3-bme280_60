@@ -6,6 +6,8 @@
 #include <Adafruit_BME280.h>
 #include <PubSubClient.h>
 
+#include "setenv.h"
+
 const uint8_t i2c_SDA = 0;
 const uint8_t i2c_SCL = 1;
 
@@ -20,17 +22,15 @@ WiFiClient espClient;
 PubSubClient client(espClient);
 
 //------------------------------------------------
-const char *ssid = "link";
-const char *pass = "dkfgf#*12091997";
+const char *ssid = WiFi_SSID;
+const char *pass = WiFi_PASS;
 
-const char *mqtt_client = "esp32c3-647834";
-
-const char *mqtt_client2 = "Home_bme280_balkon";
-
-const char *mqtt_user = "mqtt";
-const char *mqtt_pass = "qwe#*1243";
-const char *mqtt_server = "178.20.46.157";
-const char *mqtt_port = "1883";
+const char *mqtt_client = MQTT_CLIENT_N;
+const char *mqtt_client2 = MQTT_CLIENT_T;
+const char *mqtt_user = MQTT_USER;
+const char *mqtt_pass = MQTT_PASS;
+const char *mqtt_server = MQTT_SERVER;
+const char *mqtt_port = MQTT_PORT;
 
 const char *outTopicTemp = "/Temp";
 const char *outTopicPres = "/Pres";
