@@ -4,4 +4,4 @@ include/
 lib/
 test/
 setenv.h
-
+.DS_Store
